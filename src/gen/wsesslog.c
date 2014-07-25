@@ -95,7 +95,7 @@
 
 /* Maximum number of sessions that can be defined in the configuration
    file.  */
-#define MAX_SESSION_TEMPLATES	1000
+#define MAX_SESSION_TEMPLATES	1000000
 
 #ifndef TRUE
 #define TRUE  (1)
