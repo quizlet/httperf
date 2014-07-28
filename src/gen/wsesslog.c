@@ -96,6 +96,7 @@
 /* Maximum number of sessions that can be defined in the configuration
    file.  */
 #define MAX_SESSION_TEMPLATES	1000000
+#define SESSION_SIZE_BYTES 2097152
 
 #ifndef TRUE
 #define TRUE  (1)
@@ -388,11 +389,11 @@ parse_config (void)
   FILE *fp;
   int lineno, i, reqnum;
   Sess_Private_Data *sptr;
-  char line[524288];	/* some uri's get pretty long */
+  char line[SESSION_SIZE_BYTES];	/* some uri's get pretty long */
   char uri[10000];	/* some uri's get pretty long */
   char method_str[1000];
   char this_arg[10000];
-  char contents[524288];
+  char contents[SESSION_SIZE_BYTES];
   double think_time;
   int bytes_read;
   REQ *reqptr;
