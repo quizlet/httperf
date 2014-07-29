@@ -390,9 +390,9 @@ parse_config (void)
   int lineno, i, reqnum;
   Sess_Private_Data *sptr;
   char line[SESSION_SIZE_BYTES];	/* some uri's get pretty long */
-  char uri[10000];	/* some uri's get pretty long */
+  char uri[100000];	/* some uri's get pretty long */
   char method_str[1000];
-  char this_arg[10000];
+  char this_arg[SESSION_SIZE_BYTES];
   char contents[SESSION_SIZE_BYTES];
   double think_time;
   int bytes_read;
